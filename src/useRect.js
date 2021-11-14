@@ -18,7 +18,7 @@ export default function useRect(nodeRef) {
   useIsomorphicLayoutEffect(() => {
     if (element && !initialRectSet.current) {
       initialRectSet.current = true
-      const rect = element.getBoundingClientRect();
+      const rect = element.measure();
       dispatch({ rect });
     }
   }, [element])

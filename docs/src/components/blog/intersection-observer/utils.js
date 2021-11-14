@@ -1,6 +1,6 @@
 export function isDOMNode(node) {
   return (
-    node && Object.prototype.hasOwnProperty.call(node, 'getBoundingClientRect')
+    node && Object.prototype.hasOwnProperty.call(node, 'measure')
   )
 }
 

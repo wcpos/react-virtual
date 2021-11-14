@@ -23,7 +23,7 @@ export function useTocHighlight(linkClassName, linkActiveClassName, topOffset, g
           const headerAnchor = headersAnchors[index];
           const {
             top
-          } = headerAnchor.getBoundingClientRect();
+          } = headerAnchor.measure();
 
           if (top >= 0 && top <= topOffset) {
             activeHeaderAnchor = headerAnchor;

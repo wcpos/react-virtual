@@ -30,12 +30,12 @@ export const useOverScroll = () => {
   const y = useTransform(scrollY, [rect.bottom - height, rect.top + 300], [0, -rectInner.height + rect.height]);
   React.useEffect(() => {
     if (ref.current) {
-      setRect(ref.current.getBoundingClientRect());
+      setRect(ref.current.measure());
     }
   }, [setRect, ref]);
   React.useEffect(() => {
     if (refInner.current) {
-      setRectInner(refInner.current.getBoundingClientRect());
+      setRectInner(refInner.current.measure());
     }
   }, [setRectInner, refInner]);
   return {
